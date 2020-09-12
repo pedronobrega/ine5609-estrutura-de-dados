@@ -7,7 +7,7 @@ defmodule Stack do
     end
 
     def push(%Stack{items: items}, item) do
-        %Stack{ items: [item | items] }
+        %Stack{ items: [item] ++ items }
     end
 
     def pop(%Stack{items: []}) do
