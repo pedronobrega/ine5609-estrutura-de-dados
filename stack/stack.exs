@@ -3,11 +3,11 @@ defmodule Stack do
     defstruct items: []
 
     def new do
-        %Stack{}
+        {:ok, %Stack{}}
     end
 
     def push(%Stack{items: items}, item) do
-        %Stack{ items: [item] ++ items }
+        {:ok, %Stack{ items: [item] ++ items }}
     end
 
     def pop(%Stack{items: []}) do
@@ -15,7 +15,7 @@ defmodule Stack do
     end
 
     def pop(%Stack{items: [head | tail]}) do
-        {head, %Stack{items: tail}}
+        {:ok, head, %Stack{items: tail}}
     end
 
     def top(%Stack{items: []}) do 
@@ -23,7 +23,7 @@ defmodule Stack do
     end
 
     def top(%Stack{items: [head | _tail]}) do
-        head
+        {:ok, head}
     end
 
 end

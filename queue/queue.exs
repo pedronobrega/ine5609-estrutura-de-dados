@@ -2,11 +2,11 @@ defmodule Queue do
     defstruct items: []
 
     def new do
-        %Queue{}
+        {:ok, %Queue{}}
     end
 
     def enqueue(%Queue{items: items}, item) do
-        %Queue{items: items ++ [item]}
+        {:ok, %Queue{items: items ++ [item]}}
     end
 
     def dequeue(%Queue{items: []}) do
@@ -14,6 +14,6 @@ defmodule Queue do
     end
 
     def dequeue(%Queue{items: [head | tail]}) do
-        {head, %Queue{items: tail}}
+        {:ok, head, %Queue{items: tail}}
     end
 end
