@@ -47,7 +47,39 @@ class TestStack(unittest.TestCase):
 
         self.assertEqual(expectedResult, newObject.item.value)
 
+    def test_push_should_raise_exception_when_full(self):
+        newObject = Stack(1)
+        newObject.push(3)
 
+        self.assertRaises(BaseException, newObject.push)
+
+    def test_top_should_return_value(self):
+        item = Item(3)
+        newObject = Stack()
+
+        newObject.item = item
+
+        self.assertEqual(3, newObject.top())
+
+    def test_top_should_raise_exception_when_empty(self):
+        newObject = Stack()
+
+        self.assertRaises(BaseException, newObject.top)
+
+    def test_stack(self):
+        newObject = Stack(3)
+        newObject.push(1)
+        newObject.push('ABC')
+        newObject.push(2.0)
+
+        self.assertRaises(BaseException, newObject.push)
+
+        self.assertEqual(2.0, newObject.pop())
+        self.assertEqual('ABC', newObject.pop())
+        self.assertEqual(1, newObject.pop())
+
+        self.assertRaises(BaseException, newObject.pop)
+        self.assertRaises(BaseException, newObject.top)
 
 if __name__ == '__main__':
     unittest.main()

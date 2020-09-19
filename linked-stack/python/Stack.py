@@ -15,7 +15,7 @@ class Stack:
             raise(BaseException("Cannot pop an empty stack"))
         
         tmpItem = self.item
-        self.__item__(tmpItem.link)
+        self.item = tmpItem.link
         self.itemCnt -= 1
         return tmpItem.value
             
@@ -24,17 +24,16 @@ class Stack:
         if self.full():
             raise(BaseException("Cannot push into a full stack"))
         
-        previousItem = isinstance(self.item, Item) if self.item else None
-        tmpItem = Item(value, previousItem)
+        if isinstance(self.item, Item):
+            tmpItem = Item(value, self.item)
+        else:
+            tmpItem = Item(value)
+
         self.itemCnt += 1
-        self.__item__(tmpItem)
-            
+        self.item = tmpItem
 
     def top(self):
         if not isinstance(self.item, Item):
             raise(BaseException("Cannot top an empty stack"))
         
         return self.item.value
-
-    def __item__(self, item: Item = None):
-        self.item = item
