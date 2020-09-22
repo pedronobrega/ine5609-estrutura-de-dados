@@ -47,6 +47,15 @@ class TestStack(unittest.TestCase):
 
         self.assertEqual(expectedResult, newObject.item.value)
 
+    def test_push_should_push_values(self):
+        newObject = Stack(3)
+        
+        newObject.push(1)
+        newObject.push(2)
+        newObject.push(3)
+
+        self.assertEqual(3, newObject.itemCnt)
+
     def test_push_should_raise_exception_when_full(self):
         newObject = Stack(1)
         newObject.push(3)
@@ -67,10 +76,7 @@ class TestStack(unittest.TestCase):
         self.assertRaises(BaseException, newObject.top)
 
     def test_stack(self):
-        newObject = Stack(3)
-        newObject.push(1)
-        newObject.push('ABC')
-        newObject.push(2.0)
+        newObject = (Stack(3)).push(1).push('ABC').push(2.0)
 
         self.assertRaises(BaseException, newObject.push)
 

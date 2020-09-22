@@ -11,26 +11,26 @@ class Stack:
         return self.itemCnt == self.max
 
     def pop(self):
-        if not isinstance(self.item, Item):
+        if isinstance(self.item, Item):
+            tmpItem = self.item
+
+            self.itemCnt -= 1
+            self.item = tmpItem.link
+
+            return tmpItem.value
+        else:
             raise(BaseException("Cannot pop an empty stack"))
-        
-        tmpItem = self.item
-        self.item = tmpItem.link
-        self.itemCnt -= 1
-        return tmpItem.value
-            
 
     def push(self, value):
         if self.full():
             raise(BaseException("Cannot push into a full stack"))
-        
-        if isinstance(self.item, Item):
-            tmpItem = Item(value, self.item)
-        else:
-            tmpItem = Item(value)
+
+        tmpItem = Item(value, self.item)
 
         self.itemCnt += 1
         self.item = tmpItem
+
+        return self
 
     def top(self):
         if not isinstance(self.item, Item):

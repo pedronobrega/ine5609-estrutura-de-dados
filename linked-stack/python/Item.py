@@ -1,12 +1,9 @@
 class Item:
 
     def __init__(self, value: any, link = None):
-        self.__value = value
-        self.__link = link
+        self.value = value
 
-    @property
-    def value(self):
-        return self.__value
-
-    def link(self):
-        return self.__link
+        if link is not None:
+            self.link = link
+        else:
+            self.link = None
