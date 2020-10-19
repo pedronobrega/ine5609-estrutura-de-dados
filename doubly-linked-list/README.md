@@ -1,6 +1,14 @@
-# Trabalho de Estrutura de Dados
+# Trabalho II de Estrutura de Dados
 
-## Lista duplamente encadeada
+- ## Lista duplamente encadeada
+
+---
+
+### Desenvolvedores
+
+- Pedro Henrique Dias Nobrega
+
+### Descrição
 
 Esse trabalho é simples e está diretamente relacionado com as atividades que iniciamos em aula com a lista duplamente encadeada COM cursor.
 
@@ -32,3 +40,13 @@ Outras:
 - `boolean` Cheia()
 - `boolean` contém(chave)
 - `boolean` posiçãoDe(chave)
+
+### Implementação
+
+O desenvolvimento consiste em implementar as funções descritas da maneira mais simples, porém correta.
+
+Não foi elaborado nenhum esquema de como funcionaria cada função, porém o seu funcionamento está descrito no `Docstring Comments` presente abaixo da declaração de cada método em `List.py`. O objeto `Item`, presente em `Item.py` é apenas uma modificação do já previamente implementado `Item`, que possui apontamentos para o próximo e anterior valor da lista.
+
+Não foi preciso o desenvolvimento de um objeto `Ponteiro` pois somente com manipulação de "ponteiros" já foi possível a implementação.
+
+Para ter uma ideia do funcionamento dessa lista duplamente encadeada, o arquivo `__main__.py` possui uma demonstração simples de como seria utilizada em contexto real o objeto `Lista` + `Item`.
