@@ -6,29 +6,29 @@ Esse trabalho é simples e está diretamente relacionado com as atividades que i
 
 As operações públicas que precisam estar implementadas são (no mínimo):
 
-- [ ] `<elemento>` acessarAtual()
-- [ ] `void` InserirAntesDoAtual ( novo )
-- [ ] `void` InserirApósAtual ( novo )
-- [ ] `void` inserirNoFim ( novo )
-- [ ] `void` inserirNaFrente ( novo )
-- [ ] `void` inserirNaPosicao ( k, novo )
-- [ ] `void` ExcluirAtual ()
-- [ ] `void` ExcluirPrim ()
-- [ ] `void` ExcluirUlt ()
-- [ ] `void` ExcluirElem ( chave )
-- [ ] `void` ExcluirDaPos ( k )
-- [ ] `boolean` Buscar ( chave )
+- `<elemento>` acessarAtual()
+- `void` InserirAntesDoAtual ( novo )
+- `void` InserirApósAtual ( novo )
+- `void` inserirNoFim ( novo )
+- `void` inserirNaFrente ( novo )
+- `void` inserirNaPosicao ( k, novo )
+- `void` ExcluirAtual ()
+- `void` ExcluirPrim ()
+- `void` ExcluirUlt ()
+- `void` ExcluirElem ( chave )
+- `void` ExcluirDaPos ( k )
+- `boolean` Buscar ( chave )
 
 As operações para controle do cursor (privadas) devem ser, no mínimo:
 
-- [x] avançarKPosições( K )
-- [x] retrocederKPosições ( K )
-- [x] irParaPrimeiro()
-- [x] irParaUltimo()
+- avançarKPosições( K )
+- retrocederKPosições ( K )
+- irParaPrimeiro()
+- irParaUltimo()
 
 Outras:
 
-- [x] `boolean` Vazia()
-- [x] `boolean` Cheia()
-- [ ] `boolean` contém(chave)
-- [ ] `boolean` posiçãoDe(chave)
+- `boolean` Vazia()
+- `boolean` Cheia()
+- `boolean` contém(chave)
+- `boolean` posiçãoDe(chave)

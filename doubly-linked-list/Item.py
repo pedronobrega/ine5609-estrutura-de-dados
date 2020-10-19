@@ -13,13 +13,13 @@ class Item:
         else:
             self.next = None
     
-    def set_previous(self, item: Item):
+    def set_previous(self, item = None):
         self.previous = item
     
     def get_previous(self):
         return self.previous
 
-    def set_next(self, item: Item):
+    def set_next(self, item = None):
         self.next = item
     
     def get_next(self):
